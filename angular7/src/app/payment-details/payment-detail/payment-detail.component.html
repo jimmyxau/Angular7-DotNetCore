@@ -1,0 +1,90 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="Id" [value]="service.formData.Id">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fa fa-user-circle" [class.green-icon]="CardName.valid" [class.red-icon]="CardName.invalid && CardName.touched"></i>
+                </div>
+            </div>
+            <input required 
+            name="CardName" #CardName="ngModel" [(ngModel)]="service.formData.CardName" class="form-control" placeholder="Card Name">            
+        </div>    
+        <div class="alert alert-danger" *ngIf="CardName.touched && CardName.invalid">
+            Card Name is required.
+        </div>    
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fa fa-credit-card" [class.green-icon]="CardNumber.valid" [class.red-icon]="CardNumber.invalid && CardNumber.touched"></i>
+                </div>
+            </div>
+            <input required 
+            minlength="16"
+            mask="0000-0000-0000-0000"
+            name="CardNumber" #CardNumber="ngModel" [(ngModel)]="service.formData.CardNumber" placeholder="16 Digits Card Number" class="form-control">
+        </div>
+        <div class="alert alert-danger" *ngIf="CardNumber.touched && CardNumber.invalid">
+            <div *ngIf="CardNumber.errors.required">
+                Card Number is required.
+            </div>
+            <div *ngIf="CardNumber.errors.maxlength || CardNumber.errors.minlength">
+                Card Number must have 16 digits.
+            </div>
+        </div> 
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-7">
+        
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fa fa-calendar" [class.green-icon]="ExpirationDate.valid" [class.red-icon]="ExpirationDate.invalid && ExpirationDate.touched"></i>
+                    </div>
+                </div>
+                <input required 
+                 minlength="4"
+                mask="00/00"
+                name="ExpirationDate" #ExpirationDate="ngModel" [(ngModel)]="service.formData.ExpirationDate" placeholder="MM/YY" class="form-control">
+            </div>
+            <div class="alert alert-danger" *ngIf="ExpirationDate.touched && ExpirationDate.invalid">
+                <div *ngIf="ExpirationDate.errors.required">
+                    Expiration Date is required.
+                </div>
+                <div *ngIf="ExpirationDate.errors.maxlength || ExpirationDate.errors.minlength">
+                    Expiration Date must follow format "MM/YY".
+                </div>
+            </div>         
+        </div>
+    
+        <div class="form-group col-md-5">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fa fa-key" [class.green-icon]="CVV.valid" [class.red-icon]="CVV.invalid && CVV.touched"></i>
+                    </div>
+                </div>
+                <input required 
+                maxlength="3" minlength="3"
+                type="password" name="CVV" #CVV="ngModel" [(ngModel)]="service.formData.CVV" placeholder="CVV" class="form-control">
+            </div>
+            <div class="alert alert-danger" *ngIf="CVV.touched && CVV.invalid">
+                <div *ngIf="CVV.errors.required">
+                    CVV is required.
+                </div>
+                <div *ngIf="CVV.errors.maxlength || CVV.errors.minlength">
+                    CVV must have 3 digits.
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-success btn-block" [disabled]="form.invalid"><i class="fa fa-database"></i> Submit</button>
+    </div>
+
+</form>
