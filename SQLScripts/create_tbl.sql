@@ -1,0 +1,20 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[PaymentDetails](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CardName] [nvarchar](100) NULL,
+	[CardNumber] [varchar](16) NULL,
+	[ExpirationDate] [varchar](5) NULL,
+	[CVV] [varchar](3) NULL,
+ CONSTRAINT [PK_PaymentDetails] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
