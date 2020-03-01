@@ -1,0 +1,12 @@
+D:\Projects\Custom\CardPaymentAPI\Core\bin\Debug\netcoreapp2.2\Core.deps.json
+D:\Projects\Custom\CardPaymentAPI\Core\bin\Debug\netcoreapp2.2\Core.dll
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.csproj.CoreCompileInputs.cache
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInfoInputs.cache
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.AssemblyInfo.cs
+D:\Projects\Custom\CardPaymentAPI\Core\bin\Debug\netcoreapp2.2\Core.pdb
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.csprojAssemblyReference.cache
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.dll
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.pdb
+D:\Projects\Custom\CardPaymentAPI\Core\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projects\Custom\CardPaymentAPI\Core\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Projects\Custom\CardPaymentAPI\Core\obj\Debug\netcoreapp2.2\Core.csproj.CopyComplete
