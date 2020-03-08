@@ -15,8 +15,22 @@ input.ng-valid{
     color: #dc3545;
 }
 
+
 .alert{
     padding: .4em 1em !important;
+    margin-top: 12px;
+    animation: 2s alertAnim forwards;
+}
+
+@keyframes alertAnim {
+    from {
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
 }
 
 #toast-container > div{
@@ -26,3 +40,8 @@ input.ng-valid{
 table tbody tr:hover{
     cursor: pointer;
 }
+
+.disabled-cursor{
+    cursor: not-allowed;
+}
+
